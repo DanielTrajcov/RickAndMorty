@@ -10,7 +10,7 @@ const Home = () => {
   const { t, language, setLanguage } = useLanguage();
   const [status, setStatus] = useState<string | null>(null);
   const [species, setSpecies] = useState<string | null>(null);
-  const [page, setPage] = useState(1);
+  const [page] = useState(1);
   const [characters, setCharacters] = useState<Character[]>([]);
 
   const { data, loading, error, fetchMore, refetch } = useQuery<CharactersData>(
